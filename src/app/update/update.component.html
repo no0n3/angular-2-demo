@@ -1,0 +1,15 @@
+<div style="border: 1px solid #000; padding: 5px; margin-bottom: 5px;">
+  <div>
+    <!--<a [routerLink]="['/user', data.user_id]">User xx</a>-->
+    <a routerLink="/user/{{data.user_id}}">User xx</a>
+  </div>
+  {{ data.content }}
+  <div>
+    <button (click)="like()">like</button>
+    <button (click)="toggleComments(true)">comment</button>
+  </div>
+  <div>
+    {{data.likes}} likes | {{data.comments}} comments
+  </div>
+  <app-container [comments]="data.commentsData" [style.display]="showComments"></app-container>
+</div>

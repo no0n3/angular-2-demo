@@ -1,0 +1,10 @@
+<div>
+  <div>comments</div>
+  <app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
+  <div>
+    {{newComment}}
+    <input [(ngModel)]="newComment" type="text">
+    <button (click)="postComment()">post</button>
+  </div>
+  <div *ngFor="let i of x">xxxxx</div>
+</div>
